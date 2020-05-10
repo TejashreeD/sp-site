@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+/* using Sass */
+$primary: #6610f2;
+// To change default variable colors in boorstrap, define variables before importing the bootstrap css
+// $danger: #dd0000;
+// $success: lime;
+// $warning: orange;
+// $info: aqua;
+// $body-bg: #f3f3f0;
+
+@import "bootstrap";
+body, html{
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+@media screen and (min-width: 48em){
+    body{
+        text-align: justify;
+    }
+}
+// common css
+// .text-center { text-align: center;}
+.pt-10{ padding-top: 10px;}
+.pt-20{ padding-top: 20px;}
+
+.pb-10{ padding-bottom: 10px;}
+.pb-20{ padding-bottom: 20px;}
+
+.mt-10{ margin-top: 10px;}
+.mt-20{ margin-top: 20px;}
+
+.mb-10{ margin-bottom: 10px;}
+.mb-20{ margin-bottom: 20px;}
+
+.padding-top-10p{
+    padding-top: 10%;
+}
+
+.padding-bottom-10p{
+    padding-bottom: 10%;
+}
+.padding-top-2p{
+    padding-top: 2%;
+}
+.padding-bottom-2p{
+    padding-bottom: 2%;
+}

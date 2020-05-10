@@ -1,0 +1,34 @@
+/***** Footer *****/
+
+footer {
+  padding: 60px 0;
+  background: #f8f8f8;
+  // text-align: left;
+  -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05) inset;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05) inset;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05) inset;
+}
+
+// ------------------------------------------------
+.social-icons {
+  fa-icon {
+    cursor: pointer;
+  }
+}
+.link-section {
+  ul {
+    list-style: none;
+    padding: 15% 5% 5% 0;
+    li:hover{
+      cursor: pointer;
+      color: var(--primary);
+      font-weight: bold;
+    }
+  }
+}
+.pt-2per{
+  padding-top: 2%;
+}
+.link-hr{
+  border-top: 1px solid black;
+}
