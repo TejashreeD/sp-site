@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 /* using Sass */
-$primary: #6610f2;
+$primary: #007bff;
+$secondary: #FF7E67;
+// $light: #A2D5F2;
+// $dark: #000000;
+// $primary: #EEF0F1;
 // To change default variable colors in boorstrap, define variables before importing the bootstrap css
 // $danger: #dd0000;
 // $success: lime;
@@ -12,6 +16,7 @@ $primary: #6610f2;
 body, html{
     font-size: 14px;
     scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 @media screen and (min-width: 48em){
     body{

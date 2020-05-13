@@ -1,25 +1,185 @@
-<!-- app.component.html -->
-<oh-top-header></oh-top-header>
-<!-- <oh-app-header></oh-app-header> -->
-
-<div class="container  d-flex">
-    <div class="row">
+<div (scroll)="onWindowScroll($event)" class="parallax" [style.height.px]="getHeight()">
+    <header>
+        <div class="">
+            <nav id="navbar" class="p-4 navbar navbar-light text-dark fixed-top">
+                <!-- navbar-expand-sm -->
+                <a class="navbar-brand" href="#">Sample Site</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0 ml-auto justify-content-end text-uppercase"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav text-right">
+                        <li class="nav-item active">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                                href="#">Track Order</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                                href="#clients" (click)="goToDiv('clients')">Customer Feedback</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                                href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                                href="#contact" (click)="goToDiv('contact')">Contact US</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section style="padding-top: 5rem;">
         <div class="col-md-12">
 
-            <div class="text-center image padding-bottom-20">
-                <img src="../assets/images/hand-with-oil-pastel-draws-the-heart-63335.jpg" alt="" class="img-fluid">
-                <h1>Personalised Cards</h1>
-                <h2>Create your own card!</h2>
-                <a type="button" href="#multipart-form" class="btn btn-primary get-started" >Getting started</a>
+            <div class="py-3 col-md-12 float-left text-center" [style.height.px]="getHeight()">
+                <div>
+                    <img src="../assets/images/banner1.jpg" style="border-radius: 75%;
+                    height: 15rem;
+                    width: 15rem;;">
+                </div>
+                <div class="py-3 col-md-6 offset-md-3">
+                    <h3 class="py-3">Hi, I'm Tejashree</h3>
+                    <h4 class="py-3"> I create personalised card/s for you and get delivered to you.</h4>
+                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                    <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faArrowCircleDown"
+                        (click)="goToDiv('steps')">
+                    </fa-icon>
+                </div>
             </div>
-            <app-multistep-form></app-multistep-form>
+            <div id="steps" class="col-md-12 text-center float-right padding-top-15rem" [style.height.px]="getHeight()">
+                <h3>To design your card,</h3>
 
+                <div class="d-flex col-md-12 py-4 p-0 ">
+                    <div class="col-md-4 py-4">
+                        <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faGift"></fa-icon>
+                        <div class="col-md-12">Tell me the occasion</div>
+                    </div>
+                    <div class="col-md-4 py-4">
+                        <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faEnvelope"></fa-icon>
+                        <div class="col-md-12"> Message to convey </div>
+                    </div>
+                    <div class="col-md-4 py-4">
+                        <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faTruck"></fa-icon>
+                        <div class="col-md-12">Pay me money and get delivered </div>
+                    </div>
+                </div>
+                <div class="py-4"><button class="btn btn-lg btn-primary py-2 px-4"> Get started! </button> </div>
+            </div>
+            <div id="clients" class="col-md-12 text-center float-right " style="padding-top: 8rem;"
+                [style.height.px]="getHeight()+100">
+                <h3>Happy Clients</h3>
+
+                <div class="d-flex col-md-10 offset-md-1 py-4 p-0">
+                    <div id="carouselExampleIndicators" class="carousel slide col-md-12" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../assets/images/brush-canvas-close-up-colors-1151300.jpg" alt="first slide"
+                                    class="d-block img-fluid">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Lorem ipsum</h5>
+                                    <p>I have bought the card for my relative. They are very happy. Recomended for many
+                                        of my friends. </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/man-holding-red-heart-poster-867463.jpg" alt="first slide"
+                                    class="d-block img-fluid">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Lorem ipsum</h5>
+                                    <p>I have bought the card for my relative. They are very happy. Recomended for many
+                                        of my friends. </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/man-holding-red-heart-poster-867463.jpg" alt="first slide"
+                                    class="d-block img-fluid">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Lorem ipsum</h5>
+                                    <p>I have bought the card for my relative. They are very happy. Recomended for many
+                                        of my friends. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Lorem ipsum</h5>
+                            <p>I have bought the card for my relative. They are very happy. Recomended for many of my
+                                friends. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <oh-app-card-row></oh-app-card-row>
-        <oh-app-product-list></oh-app-product-list>
-        <div id="customer-feedback">
-            <oh-testimonial></oh-testimonial>
+    </section>
+
+    <footer>
+        <div class="navbar parallax-sec2 text-center" id="contact" [style.height.px]="getHeight()-60">
+            <div class="col-md-10 offset-md-1">
+                <h3 class="col-md-12 py-5">Get in touch</h3>
+                <form class="col-md-12">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <!-- <label for="inputPassword4">Name</label> -->
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <!-- <label for="inputEmail4">Email</label> -->
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="inputAddress">Address</label> -->
+                        <textarea class="form-control" placeholder="Address" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
+
+                        <!-- <input type="textarea" class="form-control" id="inputAddress" placeholder="Address"> -->
+                    </div>
+                    <div class="col-md-12 py-4">
+                        <button type="submit" class="btn btn-lg btn-primary py-2 px-4">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-10 offset-md-1 py-3">
+                <h3 class="col-md-12 py-3">Find me on...</h3>
+
+                <div class="social-icons py-3">
+                    <fa-icon size="2x" class="fixed text-primary" [fixedWidth]="true" [icon]="faInstagram" (click)="
+                        openSocialMediaAccounts(
+                          'https://www.facebook.com/TejuCraftsGreetings/'
+                        )
+                      "></fa-icon>
+                    <fa-icon size="2x" class="fixed text-primary px-2" [fixedWidth]="true" [icon]="faFacebook">
+                    </fa-icon>
+                    <fa-icon size="2x" class="fixed text-primary px-2" [fixedWidth]="true" [icon]="faTwitter"></fa-icon>
+                    <fa-icon size="2x" class="fixed text-primary px-2" [fixedWidth]="true" [icon]="faGooglePlus">
+                    </fa-icon>
+                    <fa-icon size="2x" class="fixed text-primary px-2" [fixedWidth]="true" [icon]="faPinterest">
+                    </fa-icon>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </footer>
 </div>
-<oh-site-footer></oh-site-footer>
