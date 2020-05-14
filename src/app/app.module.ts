@@ -12,6 +12,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TestimonialComponent } from './site-components/testimonial/testimonial.component';
 import { SiteFooterComponent } from './site-components/site-footer/site-footer.component';
 import { MultistepFormComponent } from './site-components/multistep-form/multistep-form.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
+import { CreatBasicCardComponent } from './components/creat-basic-card/creat-basic-card.component';
+
+// services
+import { CommonFunctionsService } from './core/services/common-functions.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +26,9 @@ import { MultistepFormComponent } from './site-components/multistep-form/multist
     ProductListComponent,
     TestimonialComponent,
     SiteFooterComponent,
-    MultistepFormComponent
+    MultistepFormComponent,
+    IntroductionComponent,
+    CreatBasicCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,7 @@ import { MultistepFormComponent } from './site-components/multistep-form/multist
     WebsiteModule,
     FontAwesomeModule,
     ],
-  providers: [],
+  providers: [CommonFunctionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

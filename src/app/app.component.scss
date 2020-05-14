@@ -3,7 +3,7 @@ html {
   }
  .parallax {
     /* The image used */
-    background-image: url("../assets/images/close-up-photography-of-colored-pencils-743986.jpg");
+    // background-image: url("../assets/images/close-up-photography-of-colored-pencils-743986.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -36,6 +36,5 @@ html {
 .carousel-caption{
     background: var(--gray-dark);
 }
-  .padding-top-15rem{
-      padding-top: 15rem;
-  }
+
+

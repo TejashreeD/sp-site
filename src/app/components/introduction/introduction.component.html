@@ -1,0 +1,35 @@
+<div class="py-3 col-md-12 float-left text-center" [style.height.px]="getHeight()">
+    <div>
+        <img src="../assets/images/banner1.jpg" style="border-radius: 75%;
+        height: 15rem;
+        width: 15rem;;">
+    </div>
+    <div class="py-3 col-md-6 offset-md-3">
+        <h3 class="py-3">Hi, I'm Tejashree</h3>
+        <h4 class="py-3"> I create personalised card/s for you and get delivered to you.</h4>
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faArrowCircleDown"
+            (click)="goToDiv('steps')">
+        </fa-icon>
+    </div>
+</div>
+<div id="steps" class="col-md-12 text-center float-right padding-top-15rem" [style.height.px]="getHeight()">
+    <h3>To design your card,</h3>
+
+    <div class="d-flex col-md-12 py-4 p-0 ">
+        <div class="col-md-4 py-4">
+            <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faGift"></fa-icon>
+            <div class="col-md-12">Tell me the occasion</div>
+        </div>
+        <div class="col-md-4 py-4">
+            <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faEnvelope"></fa-icon>
+            <div class="col-md-12"> Message to convey </div>
+        </div>
+        <div class="col-md-4 py-4">
+            <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faTruck"></fa-icon>
+            <div class="col-md-12">Pay me money and get delivered </div>
+        </div>
+    </div>
+    <div class="py-4"><button class="btn btn-lg btn-primary py-2 px-4" (click)="navigateTo('create-card')"> Get started!
+        </button> </div>
+</div>

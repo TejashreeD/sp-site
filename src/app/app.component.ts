@@ -1,16 +1,9 @@
 import { Component, HostListener, Inject } from '@angular/core';
-import { faAngleDown, faGift, faEnvelope, faTruck } from '@fortawesome/free-solid-svg-icons';
-// import {     } from '@fortawesome/fontawesome-free';
+import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { DOCUMENT } from '@angular/common';
-
-import {
-    faFacebook,
-    faTwitter,
-    faInstagramSquare,
-    faGooglePlus,
-    faPinterest,
-} from "@fortawesome/free-brands-svg-icons";
-
+import { ActivatedRoute } from '@angular/router';
+import { faFacebook, faTwitter, faInstagramSquare, faGooglePlus, faPinterest } from "@fortawesome/free-brands-svg-icons";
+import { CommonFunctionsService } from './core/services/common-functions.service';
 
 @Component({
     selector: 'app-root',
@@ -18,7 +11,9 @@ import {
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    constructor(@Inject(DOCUMENT) private document: Document) { }
+    constructor(@Inject(DOCUMENT) private document: Document,
+        private route: ActivatedRoute,
+        private commonFunctionsService: CommonFunctionsService) { }
 
     title = 'oh-app';
     faFacebook = faFacebook;
@@ -28,10 +23,8 @@ export class AppComponent {
     faPinterest = faPinterest;
     innerWidth;
     height;
-    faArrowCircleDown = faAngleDown;
-    faGift = faGift;
-    faEnvelope = faEnvelope;
-    faTruck = faTruck;
+    faAngleUp = faArrowCircleUp;
+
     ngOnInit() {
         this.innerWidth = window.innerWidth;
         this.height = window.innerHeight;
@@ -49,17 +42,21 @@ export class AppComponent {
         if (document.body.scrollTop > 20 ||
             document.documentElement.scrollTop > 20) {
             document.getElementById('navbar').classList.add('bg-light');
+            document.getElementById('go-top').classList.add('d-block');
+            document.getElementById('go-top').classList.remove('d-none');
+
         } else {
             document.getElementById('navbar').classList.remove('bg-light');
+            document.getElementById('go-top').classList.remove('d-block');
+            document.getElementById('go-top').classList.add('d-none');
 
         }
+    }
+    goToDiv(divId) {
+        document.getElementById(divId).scrollIntoView();
     }
 
     getHeight() {
         return this.height;
-    }
-    goToDiv(divId) {
-        document.getElementById(divId).scrollIntoView();
-
     }
 }
