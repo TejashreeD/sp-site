@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreatBasicCardComponent } from './creat-basic-card.component';
+import { CreatBasicCardComponent } from './create-basic-card.component';
 
 describe('CreatBasicCardComponent', () => {
   let component: CreatBasicCardComponent;

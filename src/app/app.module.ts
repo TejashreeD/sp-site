@@ -17,6 +17,9 @@ import { CreatBasicCardComponent } from './components/creat-basic-card/creat-bas
 
 // services
 import { CommonFunctionsService } from './core/services/common-functions.service';
+import { CardComponent } from './components/card/card.component';
+import { CartComponent } from './components/cart/cart.component';
+import { FaqPageComponent } from './components/faq-page/faq-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +32,9 @@ import { CommonFunctionsService } from './core/services/common-functions.service
     MultistepFormComponent,
     IntroductionComponent,
     CreatBasicCardComponent,
+    CardComponent,
+    CartComponent,
+    FaqPageComponent,
   ],
   imports: [
     BrowserModule,

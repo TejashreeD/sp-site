@@ -4,13 +4,19 @@
             <nav id="navbar" class="p-4 navbar navbar-light text-dark fixed-top">
                 <!-- navbar-expand-sm -->
                 <a class="navbar-brand" href="#">Sample Site</a>
+                <!-- <button class="btn btn-success ">Always Show</button> -->
+                <fa-icon size="2x" class="fixed text-primary ml-auto mr-1" [fixedWidth]="true" [icon]="faShoppingCart"
+                    (click)="goToPath('cart')">
+                </fa-icon>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse flex-grow-0 ml-auto justify-content-end text-uppercase"
                     id="navbarSupportedContent">
                     <ul class="navbar-nav text-right">
+
                         <li class="nav-item active">
                             <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
                                 href="#">Track Order</a>
@@ -21,7 +27,7 @@
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
-                                href="#">FAQ</a>
+                                href="#" (click)="goToPath('faq')">FAQ</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
@@ -29,12 +35,14 @@
                         </li>
                     </ul>
                 </div>
+
             </nav>
+
         </div>
     </header>
     <section style="padding-top: 5rem;">
         <div class="col-md-12">
-
+            <!-- Load all other components -->
             <router-outlet></router-outlet>
 
             <div id="clients" class="col-md-12 text-center float-right "

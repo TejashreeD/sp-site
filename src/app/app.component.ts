@@ -1,7 +1,7 @@
 import { Component, HostListener, Inject } from '@angular/core';
-import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleUp, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { DOCUMENT } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { faFacebook, faTwitter, faInstagramSquare, faGooglePlus, faPinterest } from "@fortawesome/free-brands-svg-icons";
 import { CommonFunctionsService } from './core/services/common-functions.service';
 
@@ -12,7 +12,7 @@ import { CommonFunctionsService } from './core/services/common-functions.service
 })
 export class AppComponent {
     constructor(@Inject(DOCUMENT) private document: Document,
-        private route: ActivatedRoute,
+        private route: Router,
         private commonFunctionsService: CommonFunctionsService) { }
 
     title = 'oh-app';
@@ -24,6 +24,7 @@ export class AppComponent {
     innerWidth;
     height;
     faAngleUp = faArrowCircleUp;
+    faShoppingCart = faShoppingCart;
 
     ngOnInit() {
         this.innerWidth = window.innerWidth;
@@ -58,5 +59,8 @@ export class AppComponent {
 
     getHeight() {
         return this.height;
+    }
+    goToPath(path) {
+        this.route.navigate(['/'+path]);
     }
 }

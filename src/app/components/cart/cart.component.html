@@ -1,0 +1,13 @@
+<div class="py-5 col-md-10 offset-md-1 p-0" [style.height.px]="getHeight()">
+    <div class="col-md-12 py-5 text-center">
+        <fa-icon size="4x" class="fixed py-4" [fixedWidth]="true" [icon]="faShoppingBag"></fa-icon>
+        <h1 class="py-3">
+            Your cart is currently empty.
+        </h1>
+        <div class="py-4">
+            <button type="button" class="btn btn-primary col-md-4 py-2 mr-auto"
+                (click)="navigateToPath('create-card')">{{ 'Create your card' | uppercase }}</button>
+
+        </div>
+    </div>
+</div>
