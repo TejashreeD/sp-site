@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-    selector: 'app-creat-basic-card',
-    templateUrl: './creat-basic-card.component.html',
-    styleUrls: ['./creat-basic-card.component.scss']
+    selector: 'app-create-basic-card',
+    templateUrl: './create-basic-card.component.html',
+    styleUrls: ['./create-basic-card.component.scss']
 })
-export class CreatBasicCardComponent implements OnInit {
+export class CreateBasicCardComponent implements OnInit {
     showData = false;
 
     constructor() { }

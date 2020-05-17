@@ -13,7 +13,7 @@ import { TestimonialComponent } from './site-components/testimonial/testimonial.
 import { SiteFooterComponent } from './site-components/site-footer/site-footer.component';
 import { MultistepFormComponent } from './site-components/multistep-form/multistep-form.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
-import { CreatBasicCardComponent } from './components/creat-basic-card/creat-basic-card.component';
+import { CreateBasicCardComponent } from './components/create-basic-card/create-basic-card.component';
 
 // services
 import { CommonFunctionsService } from './core/services/common-functions.service';
@@ -31,7 +31,7 @@ import { FaqPageComponent } from './components/faq-page/faq-page.component';
     SiteFooterComponent,
     MultistepFormComponent,
     IntroductionComponent,
-    CreatBasicCardComponent,
+    CreateBasicCardComponent,
     CardComponent,
     CartComponent,
     FaqPageComponent,
