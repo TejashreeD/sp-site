@@ -113,49 +113,9 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="col-md-4 col-sm-6 mb-10 text-center">
-      <div class="card card-display">
-        <img
-          class="card-img-top"
-          src="../../assets/images/pic-img.jpg"
-          alt="Card image cap"
-        />
-
-        <div class="card-body">
-           <em class="fa fa-user fa-5x"></em>
-          <i class="fas fa-chevron-left"></i>
-
-          <h5 class="card-title">Brand</h5>
-          <p class="card-text">Product name</p>
-          <div class="text-center">
-            <div class="col-md-12 d-flex">
-              <div class="col-md-6 float-left">
-                <fa-icon
-                  size="lg"
-                  class="fixed text-primary"
-                  [fixedWidth]="true"
-                  [icon]="faEye"
-                ></fa-icon>
-              </div>
-              <div class="col-md-6 float-right">
-                <fa-icon
-                  size="lg"
-                  class="fixed text-primary"
-                  [fixedWidth]="true"
-                  [icon]="faHeart"
-                ></fa-icon>
-              </div>
-            </div>
-            <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-outline-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
-</div>
-          </div>
-           <a href="#" class="btn btn-primary">View <fa-icon [icon]="faEye" ></fa-icon></a>
-        </div>
-      </div>
-    </div>-->
-
+    <div *ngFor="let product of products">
+        <p>{{product.title}}</p>
+        <p>{{product.description}}</p>
+    </div>
     </div>
 </div>

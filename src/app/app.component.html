@@ -5,9 +5,15 @@
                 <!-- navbar-expand-sm -->
                 <a class="navbar-brand" href="#">Sample Site</a>
                 <!-- <button class="btn btn-success ">Always Show</button> -->
-                <fa-icon size="2x" class="fixed text-primary ml-auto mr-1" [fixedWidth]="true" [icon]="faShoppingCart"
-                    (click)="goToPath('cart')">
-                </fa-icon>
+                <button type="button" class="btn ml-auto mr-1">
+                    <fa-icon size="2x" class="fixed text-primary ml-auto mr-1" [fixedWidth]="true"
+                        [icon]="faShoppingCart" (click)="goToPath('cart')">
+                    </fa-icon>
+                    <span class="badge badge-success badgecls">0</span>
+                </button>
+
+                <!-- <span id="" class="badge badge-light">2</span> -->
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>
@@ -23,11 +29,15 @@
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
-                                href="#clients" (click)="goToDiv('clients')">Customer Feedback</a>
+                                href="#" (click)="goToPath('create-custom-card')">Custom Cards</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
-                                href="#" (click)="goToPath('faq')">FAQ</a>
+                                href="#clients" (click)="goToDiv('clients')">Customer Feedback</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#"
+                                (click)="goToPath('faq')">FAQ</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"

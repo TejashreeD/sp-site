@@ -1,0 +1,29 @@
+<div class="col-md-10 offset-md-1 text-center py-5">
+    <div class="alert alert-success" role="alert">
+        Customised card will charge some additional charges and delivery time extends by 3-5 days.
+        <a href="#" class="alert-link">Customised card policies</a>.
+      </div>
+    <!-- <h3 class="col-md-12 py-5">Create Personal Card</h3> -->
+    <div id="steps" class="col-md-12 text-center float-right padding-top-15rem py-4">
+        <h3  class="col-md-12 py-5">To design your card,</h3>
+
+        <div class="d-flex col-md-12 py-4 p-0 ">
+            <div class="col-md-4 py-4">
+                <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faGift"></fa-icon>
+                <div class="col-md-12">Select top five cards as per demand</div>
+            </div>
+            <div class="col-md-4 py-4">
+                <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faEnvelope"></fa-icon>
+                <div class="col-md-12"> Message to convey </div>
+            </div>
+            <div class="col-md-4 py-4">
+                <fa-icon size="3x" class="fixed text-primary" [fixedWidth]="true" [icon]="faTruck"></fa-icon>
+                <div class="col-md-12"> Get reviewed final design and get delivered </div>
+            </div>
+        </div>
+        <div class="py-4"><button class="btn btn-lg btn-primary py-2 px-4" (click)="showCards()"> Get started!
+            </button> </div>
+    </div>
+    <oh-app-product-selection *ngIf="showData"></oh-app-product-selection>
+    <!-- <oh-app-product-list ></oh-app-product-list> -->
+</div>

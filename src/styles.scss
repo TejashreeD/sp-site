@@ -13,10 +13,12 @@ $primary: #007bff;
 // $body-bg: #f3f3f0;
 
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 body, html{
     font-size: 14px;
     scroll-behavior: smooth;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 @media screen and (min-width: 48em){
     body{

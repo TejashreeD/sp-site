@@ -1,0 +1,158 @@
+<div class="container pb-20" id="products">
+    <div class="row">
+        <div *ngIf="!showMsg" class="col-md-12 py-3">
+            <h5 class="float-left">Select top five card designs</h5>
+            <button class="btn btn-primary float-right" (click)="showNextStep()"
+                [ngClass]="!showNext? ' ': ' disabled'">
+                Next
+                <fa-icon size="lg" class="fixed text-light" [fixedWidth]="true" [icon]="faArrowCircleRight">
+                </fa-icon>
+            </button>
+        </div>
+        <div class="products" *ngIf="!showMsg" style="display: flex;flex-flow: wrap;">
+            <div class="col-md-3 col-md-4 col-sm-6 mb-10 text-center">
+                <div class="card card-display">
+                    <img class="card-img-top" src="../../assets/images/pic-img.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                        <i class="fas fa-chevron-left"></i>
+                        <div class="text-center">
+                            <div class="col-md-12 d-flex">
+                                <div class="col-md-1 col-sm-2 float-left">
+                                    <div class="form-check">
+                                        <input class="form-check-input position-static" type="checkbox"
+                                            id="blankCheckbox" value="option1" aria-label="">
+                                    </div>
+                                </div>
+                                <div class="col-md-11 col-sm-10 float-right">
+                                    <p class="card-text">Product name</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-md-4  col-sm-6 mb-10 text-center">
+                <div class="card card-display">
+                    <img class="card-img-top" src="../../assets/images/pic-img.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                        <i class="fas fa-chevron-left"></i>
+                        <!-- <h5 class="card-title">Brand</h5> -->
+                        <!-- <p class="card-text">Product name</p> -->
+                        <div class="text-center">
+                            <div class="col-md-12 d-flex">
+                                <div class="col-md-1 col-sm-2 float-left">
+                                    <div class="form-check">
+                                        <input class="form-check-input position-static" type="checkbox"
+                                            id="blankCheckbox" value="option1" aria-label="">
+                                    </div>
+                                </div>
+                                <div class="col-md-11 col-sm-10 float-right">
+                                    <p class="card-text">Product name</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-md-4  mb-10 text-center">
+                <div class="card card-display">
+                    <img class="card-img-top" src="../../assets/images/pic-img.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                        <i class="fas fa-chevron-left"></i>
+                        <!-- <h5 class="card-title">Brand</h5> -->
+                        <!-- <p class="card-text">Product name</p> -->
+                        <div class="text-center">
+                            <div class="col-md-12 d-flex">
+                                <div class="col-md-1 col-sm-2 float-left">
+                                    <div class="form-check">
+                                        <input class="form-check-input position-static" type="checkbox"
+                                            id="blankCheckbox" value="option1" aria-label="">
+                                    </div>
+                                </div>
+                                <div class="col-md-11 col-sm-10 float-right">
+                                    <p class="card-text">Product name</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-md-4  mb-10 text-center">
+                <div class="card card-display">
+                    <img class="card-img-top" src="../../assets/images/pic-img.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                        <i class="fas fa-chevron-left"></i>
+                        <!-- <h5 class="card-title">Brand</h5> -->
+                        <!-- <p class="card-text">Product name</p> -->
+                        <div class="text-center">
+                            <div class="col-md-12 d-flex">
+                                <div class="col-md-1 col-sm-2 float-left">
+                                    <div class="form-check">
+                                        <input class="form-check-input position-static" type="checkbox"
+                                            id="blankCheckbox" value="option1" aria-label="">
+                                    </div>
+                                </div>
+                                <div class="col-md-11 col-sm-10 float-right">
+                                    <p class="card-text">Product name</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-md-4  mb-10 text-center">
+                <div class="card card-display">
+                    <img class="card-img-top" src="../../assets/images/pic-img.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                        <i class="fas fa-chevron-left"></i>
+                        <!-- <h5 class="card-title">Brand</h5> -->
+                        <!-- <p class="card-text">Product name</p> -->
+                        <div class="text-center">
+                            <div class="col-md-12 d-flex">
+                                <div class="col-md-1 col-sm-2 float-left">
+                                    <div class="form-check">
+                                        <input class="form-check-input position-static" type="checkbox"
+                                            id="blankCheckbox" value="option1" aria-label="">
+                                    </div>
+                                </div>
+                                <div class="col-md-11 col-sm-10 float-right">
+                                    <p class="card-text">Product name</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="message col-md-12" *ngIf="showMsg">
+            <form class="col-md-12 text-left">
+                <div class="form-row">
+                    <div class="form-group py-3 col-md-12">
+                        <h5> Select the occassion</h5>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Select</option>
+                            <option>Birthday</option>
+                            <option>Anniversary</option>
+                            <option>Thank you</option>
+                            <option>Love you</option>
+                            <option>Sorry</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group py-3">
+                    <h5>Write message you want</h5>
+                    <textarea class="form-control" placeholder="Start here..." id="exampleFormControlTextarea1"
+                        rows="3"></textarea>
+                </div>
+                <div class="text-center col-md-12 py-5">
+                    <button type="button" class="btn btn-lg btn-outline-secondary py-2 px-4 mr-4" (click)="showLastStep()">Back</button>
+                    <button type="submit" class="btn btn-lg btn-primary py-2 px-4" (click)="navigateTo('custom-card-policy')">Done</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
