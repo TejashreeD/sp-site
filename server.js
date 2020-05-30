@@ -1,9 +1,9 @@
-/*//Install express server
+//Install express server
 const express = require('express');
 const path = require('path');
 
 const app = express();
-// =============== Mongo db connection
+/*// =============== Mongo db connection
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
